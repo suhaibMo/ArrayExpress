@@ -1,0 +1,40 @@
+\name{queryAE}
+\alias{queryAE}
+\docType{data}
+\title{ XML query of the ArrayExpress repository }
+\description{
+  \code{queryAE} queries the ArrayExpress database with keywords and
+  give a dataframe with  ArrayExpress identifiers and related
+  information, as an output.
+}
+\usage{
+queryAE(keywords = NULL, species = NULL)
+}
+\arguments{
+  \item{keywords}{ the keyword(s) of interest. To use several words,
+    they must be separated by a "+" as shown in the examples. }
+  \item{species}{ the specie(s) of interest.}
+}
+\value{
+  \code{ A dataframe with all the ArrayExpress dataset
+         identifiers which correspond to the query in the first column.
+         The following columns contain information about these datasets, 
+         such as the number of raw files, the number of data processed, 
+         the release date on the database, the pubmed ID, the species, 
+         the experiment design and the experimental factors.}
+}
+\seealso{\code{\link[ArrayExpress]{ArrayExpress}},
+  \code{\link[ArrayExpress]{getAE}}} 
+\author{
+  Ibrahim Emam, Audrey Kauffmann
+  
+  Maintainer: <iemam@ebi.ac.uk>  
+}
+\examples{
+## To retrieve all the identifiers of pneumonia data sets
+pneumo = queryAE(keywords = "pneumonia")
+
+## To retrieve all the identifiers of pneumonia data sets studied in human
+pneumoHS = queryAE(keywords = "pneumonia", species = "homo+sapiens")
+}
+\keyword{datasets}

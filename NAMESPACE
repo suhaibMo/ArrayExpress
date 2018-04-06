@@ -1,0 +1,28 @@
+importFrom("XML", "xmlTreeParse",
+           "xmlRoot",
+           "xpathSApply",
+           "xpathApply",
+           "xmlValue",
+           "xmlAttrs",
+           "xmlElementsByTagName",
+           "getNodeSet",
+           "xmlGetAttr")
+importFrom("Biobase", "pData",
+           "pData<-",
+           "phenoData",
+           "phenoData<-",
+           "sampleNames",
+           "sampleNames<-",
+           "read.AnnotatedDataFrame",
+           "varLabels",
+           "exprs",
+           "assayDataNew",
+           "featureData",
+           "featureData<-",
+           "featureNames",
+           "assayData")
+importFrom("limma", "read.maimages")
+importFrom("oligo", "read.celfiles")
+importFrom("utils","URLencode")
+export("ArrayExpress", "getAE", "queryAE", "ae2bioc", "getcolproc", "getcolraw", "procset", "extract.zip")
+
